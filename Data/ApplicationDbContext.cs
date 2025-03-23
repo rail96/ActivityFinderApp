@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ActivityFinderApp.Models;
 
 namespace ActivityFinderApp.Data
 {
@@ -9,5 +10,7 @@ namespace ActivityFinderApp.Data
             : base(options)
         {
         }
+
+        public DbSet<Event> Events { get; set; }
     }
 }
